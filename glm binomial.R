@@ -28,7 +28,7 @@ a<-test$default
 #model
 model<-glm(default~.,train,family=binomial((link = "logit")))
 p<-predict(model,test,type="response")
-p<-ifelse(p>0.5,1,0))
+p<-ifelse(p>0.5,1,0)
 
 #assess
 conf<-table(a,p)
